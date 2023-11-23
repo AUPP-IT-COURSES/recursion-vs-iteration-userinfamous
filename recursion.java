@@ -1,15 +1,16 @@
 public class Recursion {
     public static void main(String[] args) {
-        int number = 20; // Example number
-        double result = factorial(number);
-        System.out.println("Factorial of " + number + " is: " + result);
+        int term = 20; // Example number
+        double result = fibonacci(term);
+        System.out.println("Fibinacci of " + term + " is: " + result);
     }
 
-    public static double factorial(int n) {
-        if (n == 0) {  // Base case
-            return 1;
+    public static double fibonacci(int n) {
+        if (n <= 1) {  // Base case
+          return n;
         } else {
-            return n * factorial(n - 1); // Recursive call
+            return fibonacci(n-2) + fibonacci(n-1); // Recursive call
         }
     }
 }
+
